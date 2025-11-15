@@ -27,6 +27,15 @@ public class RemoveDuplicates {
 		}
 		System.out.println(result);
 		
+//		StringBuilder result = new StringBuilder();
+//		for (int i=0;i<str1.length();i++) {
+//			char ch = str1.charAt(i);
+//			if (result.indexOf(String.valueOf(ch)) == -1) {
+//				result.append(ch);
+//			}
+//		}
+//		System.out.println(result);
+		
 		// 3 Using Java 8
 		String result1 = str1.chars()
 				.mapToObj(c->String.valueOf((char) c))

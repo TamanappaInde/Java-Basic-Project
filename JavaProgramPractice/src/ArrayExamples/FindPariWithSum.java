@@ -5,7 +5,7 @@ public class FindPariWithSum {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int[] arr = {2,7,4,5,9};
+		int[] arr = {2,4,7,5,9};
 		int sum = 9;
 		for (int i=0;i<arr.length;i++) {
 			for (int j=i+1;j<arr.length;j++) {
@@ -14,6 +14,23 @@ public class FindPariWithSum {
 				}
 			}
 		}
+		
+		// two pointer approach
+		int left = 0;
+		int right = arr.length-1;
+		
+		for (int i=0;i<arr.length;i++) {
+			int sum1 = arr[left] + arr[right];
+			if (sum1 == sum) {
+				System.out.println(arr[left] + " , " + arr[right]);
+				break;
+			} else if (sum1 < sum) {
+				left++;
+			} else {
+				right--;
+			}
+		}
+		
 
 	}
 

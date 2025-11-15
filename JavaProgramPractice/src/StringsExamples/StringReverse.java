@@ -19,7 +19,7 @@ public class StringReverse {
 		String reversed2 = new StringBuilder(str1).reverse().toString();
 		System.out.println(reversed2);
 		
-		// 3 Reverse a String using Stream
+		// 3 Reverse a String using Swap
 		char[] chars = str1.toCharArray();
 		int start = 0;
 		int end = chars.length-1;
@@ -38,8 +38,7 @@ public class StringReverse {
 				.mapToObj(i->str1.charAt(str1.length()-i))
 				.collect(StringBuilder::new, StringBuilder::append,StringBuilder::append).toString();
 		System.out.println(reversed4);
-		
-		
+	
 	}
 
 }
